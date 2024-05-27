@@ -1,13 +1,17 @@
-// MovieContext.js
+// MovieContext.tsx
 "use client";
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
+
+interface MovieProviderProps {
+  children: ReactNode;
+}
 
 const MovieContext = createContext<any>(undefined);
 
-export function MovieProvider({ children }) {
+export function MovieProvider({ children }: MovieProviderProps) {
   const [Filmes, SetFilmes] = useState([]);
-  const [FilmesBannerInicial, setFilmesBannerInicial] = useState([]); //filmes do banner e do catalogo1, ficam fixo em todo a rodada
-  const [FilmeSelecionado, setFilmeSelecionado] = useState([]); //serve pra renderizar o filme selecionado na página
+  const [FilmesBannerInicial, setFilmesBannerInicial] = useState([]); // filmes do banner e do catalogo1, ficam fixo em todo a rodada
+  const [FilmeSelecionado, setFilmeSelecionado] = useState([]); // serve pra renderizar o filme selecionado na página
   const [PaginaAtual, setPaginaAtual] = useState(1);
 
   return (
