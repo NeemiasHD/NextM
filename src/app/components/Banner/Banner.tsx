@@ -13,7 +13,6 @@ function Banner() {
         <div className="MainBanner">
           <div className="InfoFilmeBanner">
             <h1 className="TituloFilmeBanner">
-              {" "}
               {FilmesBannerInicial[4].title}
             </h1>
             <p className="Genero">
