@@ -30,7 +30,7 @@ const Catalogo2 = () => {
     <div className="Catalogo2Main">
       {Filmes.length ? (
         <div className="Catalogo2Container">
-          {Filmes.map((item) => (
+          {Filmes.map((item: any) => (
             <Item2 item={item} />
           ))}
         </div>

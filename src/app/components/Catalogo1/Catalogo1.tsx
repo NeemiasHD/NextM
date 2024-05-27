@@ -33,7 +33,7 @@ const Catalogo1 = () => {
         {FilmesBannerInicial.length ? (
           <>
             <div className="Catalogo1Container">
-              {FilmesBannerInicial.slice(0, 4).map((item) => (
+              {FilmesBannerInicial.slice(0, 4).map((item: any) => (
                 <Item item={item} />
               ))}
             </div>

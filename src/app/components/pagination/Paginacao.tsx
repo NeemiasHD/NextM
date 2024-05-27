@@ -3,7 +3,12 @@ import React, { useEffect, useState } from "react";
 import "./Paginacao.css";
 import { UseMovieContext } from "@/app/Context/MovieContext";
 
-function Paginacao({ numeroDePaginas, maxPage }) {
+interface PaginacaoProps {
+  numeroDePaginas: number;
+  maxPage: number;
+}
+
+const Paginacao: React.FC<PaginacaoProps> = ({ numeroDePaginas, maxPage }) => {
   const { setPaginaAtual, PaginaAtual } = UseMovieContext();
   const [visiblePages, setVisiblePages] = useState([]);
 
@@ -16,7 +21,7 @@ function Paginacao({ numeroDePaginas, maxPage }) {
         start = Math.max(end - numeroDePaginas + 1, 1);
       }
 
-      const newVisiblePages = Array.from(
+      const newVisiblePages: any = Array.from(
         { length: end - start + 1 },
         (_, i) => start + i
       );
@@ -120,6 +125,6 @@ function Paginacao({ numeroDePaginas, maxPage }) {
       )}
     </div>
   );
-}
+};
 
 export default Paginacao;
