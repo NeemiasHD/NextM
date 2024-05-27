@@ -34,7 +34,7 @@ const Catalogo1 = () => {
           <>
             <div className="Catalogo1Container">
               {FilmesBannerInicial.slice(0, 4).map((item: any) => (
-                <Item item={item} />
+                <Item item={item} key={item.id} />
               ))}
             </div>
           </>

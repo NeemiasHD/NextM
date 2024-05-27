@@ -61,6 +61,7 @@ const Paginacao: React.FC<PaginacaoProps> = ({ numeroDePaginas, maxPage }) => {
         pagina === visiblePages[visiblePages.length - 1] && pagina < maxPage ? (
           <React.Fragment key={pagina}>
             <a
+            
               className="ButtonPagination"
               style={
                 PaginaAtual === pagina

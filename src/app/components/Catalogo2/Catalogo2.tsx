@@ -31,7 +31,7 @@ const Catalogo2 = () => {
       {Filmes.length ? (
         <div className="Catalogo2Container">
           {Filmes.map((item: any) => (
-            <Item2 item={item} />
+            <Item2 item={item} key={item.id} />
           ))}
         </div>
       ) : (
