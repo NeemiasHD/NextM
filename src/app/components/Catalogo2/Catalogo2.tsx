@@ -36,8 +36,8 @@ const Catalogo2 = () => {
         </div>
       ) : (
         <div className="Catalogo2Container">
-          {divsArray.map(() => (
-            <Catalogo2Loader />
+          {divsArray.map((_, index) => (
+            <Catalogo2Loader key={index} />
           ))}
         </div>
       )}
