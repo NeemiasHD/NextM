@@ -1,0 +1,45 @@
+.MainBanner {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.MainBannerLoader {
+  background-color: var(--CinzaTransparente);
+  z-index: 100;
+  position: relative;
+  height: 600px;
+}
+
+.ImageBanner {
+  width: 100%;
+  position: relative;
+}
+
+.InfoFilmeBanner {
+  position: absolute;
+  z-index: 6;
+  margin-bottom: 100px;
+  margin-right: 400px;
+}
+.Genero {
+  display: flex;
+  gap: 10px;
+}
+.TituloFilmeBanner {
+  color: white;
+}
+.Genero p {
+  color: white;
+}
+.VerMaisFilmeBanner {
+  background-color: var(--CorAzulPrincipal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}

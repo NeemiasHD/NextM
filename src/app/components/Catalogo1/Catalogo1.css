@@ -1,0 +1,66 @@
+.Catalogo1Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+}
+.Catalogo1Main::before {
+  content: "";
+  position: absolute;
+  height: 700px;
+  top: -700px;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    var(--CorCinzaPrincipal) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.Catalogo1Container {
+  position: absolute;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  top: -150px;
+  max-width: 1300px;
+}
+
+/*Catalogo Itens*/
+.ImgCatalogo1 {
+  width: 280px;
+}
+
+.TituloCatalogo1 {
+  color: white;
+  font-size: 15px;
+  max-width: 300px;
+  height: 100px;
+  font-weight: 200;
+}
+.PopularesMovies {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  top: -200px;
+  width: 100%;
+  z-index: 20;
+}
+.PopularesMovies p {
+  width: 1240px;
+
+  font-size: 25px;
+  color: white;
+  font-weight: 200;
+}
+.CatalogoItem {
+  transition: 0.2s;
+  cursor: pointer;
+}
+.CatalogoItem:hover {
+  transform: scale(1.05);
+}

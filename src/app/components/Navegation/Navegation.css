@@ -1,0 +1,74 @@
+.MainNavegation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.MovieType {
+  display: flex;
+  gap: 20px;
+  width: 1240px;
+  margin-bottom: 20px;
+}
+.MovieType p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  font-size: 15px;
+  width: 100%;
+  color: white;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 200;
+  background-color: var(--CinzaTransparente);
+}
+.MovieType p:hover {
+  background-color: var(--CorAzulPrincipal);
+  color: var(--CorCinzaPrincipal);
+}
+.MainNavegationContainer {
+  max-width: 1240px;
+}
+.PopularesMoviesNavegation {
+  font-size: 25px;
+  color: white;
+  font-weight: 200;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+.inputPesquisa {
+  width: 100%;
+  height: 40px;
+border-radius: 10px;
+  border: none;
+background-color: var(--CinzaTransparente);
+  color: white;
+  padding: 20px;
+  font-size: 15px;
+}
+.inputPesquisa:focus {
+  outline: none;
+}
+.Search.Bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.IconSearch {
+  position: absolute;
+  right: 20px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.IconSearch:hover {
+  transform: scale(1.1);
+}
