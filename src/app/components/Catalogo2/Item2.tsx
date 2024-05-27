@@ -2,7 +2,15 @@ import { UseMovieContext } from "@/app/Context/MovieContext";
 import Link from "next/link";
 import React from "react";
 
-function Item({ item }) {
+interface ItemProps {
+  item: {
+    id: number;
+    title: string;
+    poster_path: string;
+  };
+}
+
+function Item({ item }: ItemProps) {
   const { setFilmeSelecionado, FilmeSelecionado } = UseMovieContext();
   return (
     <Link

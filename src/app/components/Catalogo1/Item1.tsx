@@ -1,6 +1,13 @@
 import React from "react";
-
-function Item({ item }) {
+interface ItemProps {
+  item: {
+    id: number;
+    title: string;
+    backdrop_path: string;
+    // Adicione outros campos conforme necessário
+  };
+}
+function Item({ item }: ItemProps) {
   return (
     <div className="CatalogoItem" key={item.id}>
       <img
