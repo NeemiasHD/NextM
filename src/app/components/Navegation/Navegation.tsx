@@ -40,7 +40,7 @@ function Navegation() {
     <div className="MainNavegation">
       <div className="MainNavegationContainer">
         <div className="PopularesMoviesNavegation">
-          <p>Todos</p>
+          <p>All</p>
         </div>
         <div className="MovieType">
           <p
@@ -49,7 +49,7 @@ function Navegation() {
               setSearchFilter(28);
             }}
           >
-            Ação
+            Action
           </p>
           <p
             className={SearchFilter === 27 ? "filtroAtualBusca" : "FiltroBusca"}
@@ -57,7 +57,7 @@ function Navegation() {
               setSearchFilter(27);
             }}
           >
-            Terror
+            Horror
           </p>
           <p
             className={
@@ -67,7 +67,7 @@ function Navegation() {
               setSearchFilter(9648);
             }}
           >
-            Suspense
+            Mystery
           </p>
           <p
             className={
@@ -85,7 +85,7 @@ function Navegation() {
               setSearchFilter(35);
             }}
           >
-            Comedia
+            Comedy
           </p>
           <p
             className={
@@ -95,7 +95,7 @@ function Navegation() {
               setSearchFilter(878);
             }}
           >
-            Ficção Cientifica
+           Science Fiction
           </p>
           <p
             className={SearchFilter === 16 ? "filtroAtualBusca" : "FiltroBusca"}
@@ -103,7 +103,7 @@ function Navegation() {
               setSearchFilter(16);
             }}
           >
-            Animação
+            Animation
           </p>
           <p
             className={SearchFilter === 14 ? "filtroAtualBusca" : "FiltroBusca"}
@@ -111,7 +111,7 @@ function Navegation() {
               setSearchFilter(14);
             }}
           >
-            Fantasia
+            Fantasy
           </p>
           <p
             className={SearchFilter === 99 ? "filtroAtualBusca" : "FiltroBusca"}
@@ -119,7 +119,7 @@ function Navegation() {
               setSearchFilter(99);
             }}
           >
-            Documentario
+            Documentary
           </p>
         </div>
         <div className="Search Bar">
@@ -127,7 +127,7 @@ function Navegation() {
             type="text"
             defaultValue={SearchContent.replace(/\+/g, " ")}
             className="inputPesquisa"
-            placeholder={"PESQUISA"}
+            placeholder={"SEARCH"}
             onChange={handleChange}
             onKeyPress={handleKeyPress}
           />

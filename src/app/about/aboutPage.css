@@ -1,0 +1,16 @@
+.aboutPage {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutPage p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 500px;
+  color: white;
+  border: 1px solid var(--CorAzulPrincipal);
+  padding: 20px;
+}

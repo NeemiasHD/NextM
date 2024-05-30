@@ -26,12 +26,17 @@ function Header() {
       <p className="LogoSite">NEXTM</p>
       <div className="ListHeader">
         <Link href={"/"}>Movies</Link>
-        <a>About</a>
-        <a>Contact</a>
+        <Link href={"/about"}>About</Link>
+        <a
+          href="https://www.linkedin.com/in/neemias-claudio-957267302/"
+          target="blank"
+        >
+          Contact
+        </a>
       </div>
-      <div className="SearchHeader">
+      <Link className="SearchHeader" href={"/"}>
         <Home />
-      </div>
+      </Link>
     </div>
   );
 }

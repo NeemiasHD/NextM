@@ -10,7 +10,7 @@ function page() {
   return (
     <div className="MainWebSite">
       <Banner />
-      <Catalogo1 Name={"Populares"}/>
+      <Catalogo1 Name={"Popular"}/>
       <Navegation />
       <Catalogo2 />
 

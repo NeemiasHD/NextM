@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import { Instagram, Twitter, Telegram, GitHub } from "@mui/icons-material";
+import { Instagram, Twitter, GitHub, LinkedIn } from "@mui/icons-material";
+import Link from "next/link";
 
 function footer() {
   return (
@@ -10,33 +11,59 @@ function footer() {
           <h1>NEXTM</h1>
         </div>
         <div className="Footer NavegacaoContainer">
-          <h1>Navegação</h1>
+          <h1>Navegation</h1>
           <div className="NavegacaoItensF">
-            <p>Home</p>
-            <p>Filmes</p>
+            <Link href={"/"}>Home</Link>
+            <Link href={"/"}>Movies</Link>
           </div>
         </div>
         <div className="Footer ContatoContainer">
-          <h1>Contato</h1>
+          <h1>Contact</h1>
           <div className="ContatoItensF">
-            <p>Portifólio</p>
-            <p>Repositório</p>
-            <p>Contato</p>
-            <p>neemiasclaudio5@gmail.com</p>
+            <a
+              href="https://github.com/NeemiasHD?tab=repositories"
+              target="blank"
+            >
+              Portfolio
+            </a>
+            <a
+              href="https://neemiashd.github.io/Meu_Portifolio/"
+              target="blank"
+            >
+              Repository
+            </a>
+            <a
+              href="mailto:neemiasclaudio5@gmail.com?subject=Trabalho"
+              target="blank"
+            >
+              contact
+            </a>
+            <a>neemiasclaudio5@gmail.com</a>
           </div>
         </div>
         <div className="Footer SocialMediaContainer">
-          <h1>Redes Sociais</h1>
+          <h1>Social Media</h1>
           <div className="iconsSocial">
-            <Instagram className="icon instagram" />
-            <Twitter className="icon twitter" />
-            <Telegram className="icon telegram" />
-            <GitHub className="icon github" />
+            <a href="https://www.instagram.com/neemias_claudio/" target="blank">
+              <Instagram className="icon instagram" />
+            </a>
+            <a href="https://x.com/neemiasclaudio5" target="blank">
+              <Twitter className="icon twitter" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/neemias-claudio-957267302/"
+              target="blank"
+            >
+              <LinkedIn className="icon telegram" />
+            </a>
+            <a href="https://github.com/NeemiasHD" target="blank">
+              <GitHub className="icon github" />
+            </a>
           </div>
         </div>
       </div>
       <div className="FooterCopyright">
-        <p>&copy; 2024 NEXTM. Todos os direitos reservados.</p>
+        <p>&copy; 2024 NEXTM. All rights reserved.</p>
       </div>
     </>
   );

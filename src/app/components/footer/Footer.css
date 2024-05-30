@@ -6,7 +6,7 @@
   display: flex;
   gap: 150px;
   padding-top: 20px;
-  height: 350px;
+  height: 400px;
 }
 .iconsSocial {
   display: flex;
@@ -37,7 +37,7 @@
   margin-top: 30px;
 }
 .TitleContainerFooter h1 {
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 200;
   color: var(--CorAzulPrincipal);
 }
@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
 }
-.NavegacaoItensF p {
+.NavegacaoItensF a {
   color: white;
   cursor: pointer;
   font-size: 12px;
@@ -58,16 +58,16 @@
   align-items: last baseline;
   gap: 20px;
 }
-.ContatoItensF p {
+.ContatoItensF a {
   color: white;
   cursor: pointer;
   transition: all 0.3s;
   font-size: 12px;
 }
-.ContatoItensF p:hover {
+.ContatoItensF a:hover {
   color: var(--CorAzulPrincipal);
 }
-.NavegacaoItensF p:hover {
+.NavegacaoItensF a:hover {
   color: var(--CorAzulPrincipal);
 }
 .FooterCopyright {
@@ -101,17 +101,16 @@
 }
 @media (max-width: 750px) {
   .TitleContainerFooter h1 {
-    font-size: 35px;
-
+    font-size: 20px;
   }
   .Footer h1 {
     font-size: 12px;
-    margin-top: 25px;
+    margin-top: 10px;
   }
-  .ContatoItensF p {
+  .ContatoItensF a {
     font-size: 6px;
   }
-  .NavegacaoItensF p {
+  .NavegacaoItensF a {
     font-size: 6px;
   }
   .icon {
@@ -119,7 +118,6 @@
     width: 10px;
   }
   .iconsSocial {
- 
     gap: 5px;
   }
 
