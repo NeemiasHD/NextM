@@ -69,7 +69,7 @@ const Catalogo2 = () => {
               setPaginaAtual(1);
             }}
           >
-            Voltar
+            Return
           </a>
         </div>
       ) : (
