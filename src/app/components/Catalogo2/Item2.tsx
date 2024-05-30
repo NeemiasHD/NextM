@@ -17,7 +17,7 @@ function Item({ item }: ItemProps) {
       onClick={() => {
         setFilmeSelecionado(item);
       }}
-      href={"/Information"}
+      href={`/Information/${item.id}`}
       className="CatalogoItem2"
       key={item.id}
     >
@@ -27,7 +27,7 @@ function Item({ item }: ItemProps) {
         alt={item.title}
       />
 
-      <h1 className="TituloCatalogo1">{item.title.substring(0, 24)}</h1>
+      <h1 className="TituloCatalogo2">{item.title.substring(0, 24)}</h1>
     </Link>
   );
 }

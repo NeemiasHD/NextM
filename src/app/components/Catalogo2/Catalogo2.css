@@ -28,9 +28,10 @@
   box-shadow: 0px 0px 50px -30px var(--CorAzulPrincipal);
 }
 
-.TituloCatalogo1 {
+.TituloCatalogo2 {
   color: white;
   font-size: 15px;
+  height: 50px;
   font-weight: 200;
 }
 .CatalogoItem2 {
@@ -43,7 +44,39 @@
 }
 .tituloLoaderCatalogo2 {
   margin-top: 10px;
+  margin-bottom: 50px;
   width: 220px;
   height: 20px;
   background-color: var(--CinzaTransparente);
+}
+.MainVoltarPesquisa {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voltarPesquisa {
+  margin: 50px;
+  margin-top: 10px;
+  background-color: var(--CorAzulPrincipal);
+  color: black;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (max-width: 750px) {
+  .ImgCatalogo2 {
+    width: 100px;
+    height: 150px;
+  }
+  .TituloCatalogo2 {
+    font-size: 7px;
+  }
+  .Catalogo2Container {
+    gap: 7px;
+  }
 }

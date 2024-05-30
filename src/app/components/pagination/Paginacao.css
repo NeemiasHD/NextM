@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 70px;
+  margin-top: 30px;
 }
 .ButtonPagination {
-  border: 1px solid var(--CorAzulPrincipal);
   width: 40px;
   height: 40px;
   display: flex;
@@ -25,4 +26,20 @@
 .Pontos3 {
   color: white;
   font-size: 23px;
+}
+@media (max-width: 600px) {
+  .ButtonPagination {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+  .PaginationMain {
+   
+    gap: 10px;
+   
+  }
+  .Pontos3 {
+    color: white;
+    font-size: 10px;
+  }
 }

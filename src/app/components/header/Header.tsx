@@ -26,7 +26,7 @@ function Header() {
       <p className="LogoSite">NEXTM</p>
       <div className="ListHeader">
         <Link href={"/"}>Movies</Link>
-        <a>Series</a>
+        <a>About</a>
         <a>Contact</a>
       </div>
       <div className="SearchHeader">

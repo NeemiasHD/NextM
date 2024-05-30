@@ -27,14 +27,20 @@
   display: flex;
   gap: 10px;
 }
+.Genero p:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+}
 .TituloFilmeBanner {
   color: white;
+  width: 500px;
 }
 .Genero p {
   color: white;
 }
 .VerMaisFilmeBanner {
   background-color: var(--CorAzulPrincipal);
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,4 +48,47 @@
   height: 50px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .MainBanner {
+    height: 100%;
+  }
+  .InfoFilmeBanner {
+    left: 0;
+    margin-left: 50px;
+  }
+  .TituloFilmeBanner {
+    width: 100%;
+  }
+}
+
+@media (max-width: 950px) {
+  .TituloFilmeBanner {
+    font-size: 15px;
+  }
+  .Genero p {
+    font-size: 10px;
+  }
+  .VerMaisFilmeBanner {
+    font-size: 10px;
+    width: 50px;
+    height: 20px;
+    border-radius: 0px;
+  }
+  .Genero {
+    gap: 5px;
+  }
+  .Genero p {
+    font-size: 7px;
+  }
+  .Genero p:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .InfoFilmeBanner {
+    margin-top: 50px;
+  }
 }

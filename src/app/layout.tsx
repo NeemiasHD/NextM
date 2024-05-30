@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { MovieProvider } from "./Context/MovieContext";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <Header />
           {children}
+          <Footer />
         </body>
       </html>
     </MovieProvider>

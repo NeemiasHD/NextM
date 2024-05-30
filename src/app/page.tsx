@@ -5,14 +5,16 @@ import Catalogo2 from "./components/Catalogo2/Catalogo2";
 import Navegation from "./components/Navegation/Navegation";
 import Paginacao from "./components/pagination/Paginacao";
 
+
 function page() {
   return (
     <div className="MainWebSite">
       <Banner />
-      <Catalogo1 />
+      <Catalogo1 Name={"Populares"}/>
       <Navegation />
       <Catalogo2 />
-      <Paginacao numeroDePaginas={9} maxPage={500} />
+
+     
     </div>
   );
 }

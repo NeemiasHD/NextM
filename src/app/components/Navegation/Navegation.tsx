@@ -1,8 +1,41 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./Navegation.css";
-import { Search } from "@mui/icons-material";
-
+import { Close, Search } from "@mui/icons-material";
+import { UseMovieContext } from "@/app/Context/MovieContext";
 function Navegation() {
+  const {
+    Filmes,
+    SetFilmes,
+    setisOnSearchMode,
+    setSearchContent,
+    SearchContent,
+    setSearchFilter,
+    SearchFilter,
+  } = UseMovieContext();
+  const [Input, setInput] = useState("");
+  const handleChange = (e: any) => {
+    setInput(e.target.value.replace(/ /g, "+"));
+    setSearchContent(Input);
+  };
+  const handleKeyPress = (e: any) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
+
+  const handleSearch = async () => {
+    if (Input != "") {
+      setSearchFilter(0);
+      const response = await fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=506ef0ac17c7aaa97f0421390a8ff530&query=${Input}`
+      );
+      const data = await response.json();
+      SetFilmes(data.results);
+      setisOnSearchMode(true);
+    }
+    setSearchContent(Input);
+  };
   return (
     <div className="MainNavegation">
       <div className="MainNavegationContainer">
@@ -10,23 +43,109 @@ function Navegation() {
           <p>Todos</p>
         </div>
         <div className="MovieType">
-          <p>Ação</p>
-          <p>Terror</p>
-          <p>Suspense</p>
-          <p>Romance</p>
-          <p>Comedia</p>
-          <p>Ficção Cientifica</p>
-          <p>Animação</p>
-          <p>Fantasia</p>
+          <p
+            className={SearchFilter === 28 ? "filtroAtualBusca" : "FiltroBusca"}
+            onClick={() => {
+              setSearchFilter(28);
+            }}
+          >
+            Ação
+          </p>
+          <p
+            className={SearchFilter === 27 ? "filtroAtualBusca" : "FiltroBusca"}
+            onClick={() => {
+              setSearchFilter(27);
+            }}
+          >
+            Terror
+          </p>
+          <p
+            className={
+              SearchFilter === 9648 ? "filtroAtualBusca" : "FiltroBusca"
+            }
+            onClick={() => {
+              setSearchFilter(9648);
+            }}
+          >
+            Suspense
+          </p>
+          <p
+            className={
+              SearchFilter === 10749 ? "filtroAtualBusca" : "FiltroBusca"
+            }
+            onClick={() => {
+              setSearchFilter(10749);
+            }}
+          >
+            Romance
+          </p>
+          <p
+            className={SearchFilter === 35 ? "filtroAtualBusca" : "FiltroBusca"}
+            onClick={() => {
+              setSearchFilter(35);
+            }}
+          >
+            Comedia
+          </p>
+          <p
+            className={
+              SearchFilter === 878 ? "filtroAtualBusca" : "FiltroBusca"
+            }
+            onClick={() => {
+              setSearchFilter(878);
+            }}
+          >
+            Ficção Cientifica
+          </p>
+          <p
+            className={SearchFilter === 16 ? "filtroAtualBusca" : "FiltroBusca"}
+            onClick={() => {
+              setSearchFilter(16);
+            }}
+          >
+            Animação
+          </p>
+          <p
+            className={SearchFilter === 14 ? "filtroAtualBusca" : "FiltroBusca"}
+            onClick={() => {
+              setSearchFilter(14);
+            }}
+          >
+            Fantasia
+          </p>
+          <p
+            className={SearchFilter === 99 ? "filtroAtualBusca" : "FiltroBusca"}
+            onClick={() => {
+              setSearchFilter(99);
+            }}
+          >
+            Documentario
+          </p>
         </div>
         <div className="Search Bar">
           <input
             type="text"
+            defaultValue={SearchContent.replace(/\+/g, " ")}
             className="inputPesquisa"
             placeholder={"PESQUISA"}
+            onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
-          <div className="IconSearch">
+          <div className="IconSearch" onClick={handleSearch}>
             <Search />
+          </div>
+          <div
+            className="IconSearch close"
+            onClick={() => {
+              setSearchFilter(0);
+              const inputElement =
+                document.querySelector<HTMLInputElement>(".inputPesquisa");
+              if (inputElement) {
+                inputElement.value = "";
+              }
+            }}
+          >
+            <Close />
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 20px;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
 }
 .HeaderMain::before {
   content: "";
@@ -61,4 +61,23 @@
 .SearchHeader {
   color: white;
   z-index: 2;
+}
+
+@media (max-width: 750px) {
+  .HeaderMain {
+    height: 25px;
+  }
+
+  .ListHeader {
+    gap: 30px;
+  }
+  .ListHeader a {
+    font-size: 7px;
+  }
+  .LogoSite {
+    font-size: 15px;
+  }
+  .SearchHeader {
+    size: 10px;
+  }
 }

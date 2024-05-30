@@ -1,35 +1,66 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Banner.css";
 import { UseMovieContext } from "@/app/Context/MovieContext";
 import { Rating } from "react-simple-star-rating";
-
+import Link from "next/link";
 function Banner() {
   const { FilmesBannerInicial } = UseMovieContext();
 
+  interface BannerData {
+    title: string;
+    genres: { id: number; name: string }[];
+    vote_average: number;
+    id: number;
+    backdrop_path: string;
+  }
+
+  const [Banner, setBanner] = useState<BannerData | null>(null);
+
+  useEffect(() => {
+    // buscando o filme para ser banner
+    const fetchBanner = async () => {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/movie/${FilmesBannerInicial[4].id}?api_key=506ef0ac17c7aaa97f0421390a8ff530`
+      );
+      const data = await response.json();
+      setBanner(data);
+      console.log(data);
+    };
+    if (FilmesBannerInicial && FilmesBannerInicial.length > 0) {
+      // tirando erro pois no começõ filmes banner n tem nada dentro.
+      fetchBanner();
+    }
+  }, [FilmesBannerInicial]);
+
   return (
     <>
-      {FilmesBannerInicial.length ? (
+      {Banner && Banner.title ? (
         <div className="MainBanner">
           <div className="InfoFilmeBanner">
-            <h1 className="TituloFilmeBanner">
-              {FilmesBannerInicial[4].title}
-            </h1>
+            <h1 className="TituloFilmeBanner">{Banner.title}</h1>
             <p className="Genero">
-              <p>Ação</p>
-              <p>Suspense</p>
-              <p>Ficção</p>
+              {Banner.genres.map((generos: any) => (
+                <p>{generos.name}</p>
+              ))}
             </p>
+
             <Rating
               readonly={true}
-              initialValue={FilmesBannerInicial[4].vote_average / 2}
+              initialValue={Banner.vote_average / 2}
               allowFraction={true}
+              size={30}
             />
-            <p className="VerMaisFilmeBanner">Ver Mais</p>
+            <Link
+              className="VerMaisFilmeBanner"
+              href={`Information/${Banner.id}`}
+            >
+              Ver Mais
+            </Link>
           </div>
           <img
             className="ImageBanner"
-            src={`https://image.tmdb.org/t/p/original${FilmesBannerInicial[4].backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/original${Banner.backdrop_path}`}
           />
         </div>
       ) : (
