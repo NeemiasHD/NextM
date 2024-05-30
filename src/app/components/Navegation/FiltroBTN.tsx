@@ -1,6 +1,10 @@
 import { UseMovieContext } from "@/app/Context/MovieContext";
 import React from "react";
-function FiltroBTN({ name, filter }) {
+interface PaginacaoProps {
+  name: string;
+  filter: number;
+}
+const FiltroBTN: React.FC<PaginacaoProps> = ({ name, filter }) => {
   const {
     setisOnSearchMode,
 
@@ -18,6 +22,6 @@ function FiltroBTN({ name, filter }) {
       {name}
     </p>
   );
-}
+};
 
 export default FiltroBTN;
