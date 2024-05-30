@@ -41,7 +41,7 @@ function Banner() {
             <h1 className="TituloFilmeBanner">{Banner.title}</h1>
             <p className="Genero">
               {Banner.genres.map((generos: any) => (
-                <p>{generos.name}</p>
+                <p key={generos.id}>{generos.name}</p>
               ))}
             </p>
 

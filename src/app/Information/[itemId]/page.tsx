@@ -46,7 +46,7 @@ const MoviePage = async ({ params }: { params: params }) => {
               </h1>
               <div className="GenerosInfoM">
                 {filme.genres.map((genero: any) => (
-                  <p>{genero.name}</p>
+                  <p key={genero.id}>{genero.name}</p>
                 ))}
               </div>
               <p className="overviewInfoMovie">{filme.overview}</p>
