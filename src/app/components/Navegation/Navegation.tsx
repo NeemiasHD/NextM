@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import "./Navegation.css";
 import { Close, Search } from "@mui/icons-material";
 import { UseMovieContext } from "@/app/Context/MovieContext";
+import FiltroBTN from "./FiltroBTN";
 function Navegation() {
   const {
-    Filmes,
     SetFilmes,
     setisOnSearchMode,
     setSearchContent,
@@ -43,84 +43,15 @@ function Navegation() {
           <p>All</p>
         </div>
         <div className="MovieType">
-          <p
-            className={SearchFilter === 28 ? "filtroAtualBusca" : "FiltroBusca"}
-            onClick={() => {
-              setSearchFilter(28);
-            }}
-          >
-            Action
-          </p>
-          <p
-            className={SearchFilter === 27 ? "filtroAtualBusca" : "FiltroBusca"}
-            onClick={() => {
-              setSearchFilter(27);
-            }}
-          >
-            Horror
-          </p>
-          <p
-            className={
-              SearchFilter === 9648 ? "filtroAtualBusca" : "FiltroBusca"
-            }
-            onClick={() => {
-              setSearchFilter(9648);
-            }}
-          >
-            Mystery
-          </p>
-          <p
-            className={
-              SearchFilter === 10749 ? "filtroAtualBusca" : "FiltroBusca"
-            }
-            onClick={() => {
-              setSearchFilter(10749);
-            }}
-          >
-            Romance
-          </p>
-          <p
-            className={SearchFilter === 35 ? "filtroAtualBusca" : "FiltroBusca"}
-            onClick={() => {
-              setSearchFilter(35);
-            }}
-          >
-            Comedy
-          </p>
-          <p
-            className={
-              SearchFilter === 878 ? "filtroAtualBusca" : "FiltroBusca"
-            }
-            onClick={() => {
-              setSearchFilter(878);
-            }}
-          >
-           Science Fiction
-          </p>
-          <p
-            className={SearchFilter === 16 ? "filtroAtualBusca" : "FiltroBusca"}
-            onClick={() => {
-              setSearchFilter(16);
-            }}
-          >
-            Animation
-          </p>
-          <p
-            className={SearchFilter === 14 ? "filtroAtualBusca" : "FiltroBusca"}
-            onClick={() => {
-              setSearchFilter(14);
-            }}
-          >
-            Fantasy
-          </p>
-          <p
-            className={SearchFilter === 99 ? "filtroAtualBusca" : "FiltroBusca"}
-            onClick={() => {
-              setSearchFilter(99);
-            }}
-          >
-            Documentary
-          </p>
+          <FiltroBTN name={"Action"} filter={28} />
+          <FiltroBTN name={"Horror"} filter={27} />
+          <FiltroBTN name={"Mystery"} filter={9648} />
+          <FiltroBTN name={"Romance"} filter={10749} />
+          <FiltroBTN name={"Comedy"} filter={35} />
+          <FiltroBTN name={"Science Fiction"} filter={878} />
+          <FiltroBTN name={"Animation"} filter={16} />
+          <FiltroBTN name={"Fantasy"} filter={14} />
+          <FiltroBTN name={"Documentary"} filter={99} />
         </div>
         <div className="Search Bar">
           <input
@@ -138,6 +69,7 @@ function Navegation() {
             className="IconSearch close"
             onClick={() => {
               setSearchFilter(0);
+
               const inputElement =
                 document.querySelector<HTMLInputElement>(".inputPesquisa");
               if (inputElement) {
