@@ -29,6 +29,11 @@
   background-color: var(--CorAzulPrincipal);
   color: var(--CorCinzaPrincipal);
 }
+.ContentFilters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .MainNavegationContainer {
   width: 1240px;
 }
@@ -107,6 +112,9 @@
   .FiltroBusca {
     font-size: 50%;
   }
+  .PopularesMoviesNavegation {
+    margin-left: 50px;
+  }
 }
 @media (max-width: 750px) {
   .MovieType {
@@ -115,6 +123,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    max-width: 370px;
   }
   .FiltroBusca {
     width: 70px;
@@ -128,6 +137,5 @@
   .filtroAtualBusca {
     font-size: 7px;
     width: 70px;
-
   }
 }

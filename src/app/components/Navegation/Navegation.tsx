@@ -42,16 +42,18 @@ function Navegation() {
         <div className="PopularesMoviesNavegation">
           <p>All</p>
         </div>
-        <div className="MovieType">
-          <FiltroBTN name={"Action"} filter={28} />
-          <FiltroBTN name={"Horror"} filter={27} />
-          <FiltroBTN name={"Mystery"} filter={9648} />
-          <FiltroBTN name={"Romance"} filter={10749} />
-          <FiltroBTN name={"Comedy"} filter={35} />
-          <FiltroBTN name={"Science Fiction"} filter={878} />
-          <FiltroBTN name={"Animation"} filter={16} />
-          <FiltroBTN name={"Fantasy"} filter={14} />
-          <FiltroBTN name={"Documentary"} filter={99} />
+        <div className="ContentFilters">
+          <div className="MovieType">
+            <FiltroBTN name={"Action"} filter={28} />
+            <FiltroBTN name={"Horror"} filter={27} />
+            <FiltroBTN name={"Mystery"} filter={9648} />
+            <FiltroBTN name={"Romance"} filter={10749} />
+            <FiltroBTN name={"Comedy"} filter={35} />
+            <FiltroBTN name={"Science Fiction"} filter={878} />
+            <FiltroBTN name={"Animation"} filter={16} />
+            <FiltroBTN name={"Fantasy"} filter={14} />
+            <FiltroBTN name={"Documentary"} filter={99} />
+          </div>
         </div>
         <div className="Search Bar">
           <input
